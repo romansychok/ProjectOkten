@@ -24,8 +24,6 @@ public class UserValidator implements Validator {
         else if (user.getPassword().isEmpty()){
             errors.rejectValue("password","","Password field is empty");
         }
-        else if (user.getUserImage().isEmpty()){
-            errors.rejectValue("userImage","","Please upload your image");
-        }
+
     }
 }

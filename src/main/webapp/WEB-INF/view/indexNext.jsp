@@ -7,7 +7,7 @@
     <form:errors path="username"/>
     <form:input path="password"/>
     <form:errors path="password"/>
-    <input type="file" name="userImage">
+    <input type="file" name="userImageX">
     <input type="submit">
 </form:form>
 

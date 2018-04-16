@@ -60,13 +60,24 @@ public class UserController {
 
 
     @PostMapping("/saveUser")
-    public String saveUser(@ModelAttribute("eUser")@Valid User user,BindingResult result){
+    public String saveUser(@ModelAttribute("eUser")  @Valid User user ,BindingResult result,
+                           @RequestParam("userImageX")MultipartFile multipartFile){
         if (result.hasErrors()){
             System.out.println("We have error!!!");
             return "indexNext";
         }
+        String path = System.getProperty("user.home") + File.separator + "projectImages\\";
+
+        try {
+            multipartFile.transferTo(new File(path + multipartFile.getOriginalFilename()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        user.setUserImage("\\images\\" + multipartFile.getOriginalFilename());
         userService.save(user);
-        return "index";
+
+        return "redirect:/";
     }
 
     @GetMapping("/indexNext")
