@@ -16,6 +16,8 @@ public class Brand extends AbstractEntity {
     private Country country;
 
     @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "BrandProduct", joinColumns = @JoinColumn(name = "BrandID"),
+            inverseJoinColumns = @JoinColumn(name = "ProductID"))
     private Set<Product> products = new HashSet<Product>();
 
 

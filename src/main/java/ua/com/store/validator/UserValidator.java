@@ -25,5 +25,6 @@ public class UserValidator implements Validator {
             errors.rejectValue("password","","Password field is empty");
         }
 
+
     }
 }

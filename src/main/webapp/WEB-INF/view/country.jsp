@@ -15,7 +15,7 @@ Country
 
 <form:form action="/saveCountry" method="post" modelAttribute="eCountry">
     <form:input path="countryName"/>
-    <%--<form:errors path="countryName"/>--%>
+    <form:errors path="countryName"/>
     <input type="submit">
 </form:form>
 <c:forEach items="${countries}" var="country">

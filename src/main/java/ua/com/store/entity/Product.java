@@ -1,9 +1,6 @@
 package ua.com.store.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,12 +20,15 @@ public class Product extends AbstractEntity {
 
 
     @ManyToMany
+    @JoinTable(name = "UserProduct", joinColumns = @JoinColumn(name = "ProductID"), inverseJoinColumns = @JoinColumn(name = "UserID"))
     private Set<User> users = new HashSet<>();
 
     @ManyToMany
+    @JoinTable(name = "ProductOrder" , joinColumns = @JoinColumn(name = "ProductID"), inverseJoinColumns = @JoinColumn(name = "OrderID"))
     private Set<Orders> orders = new HashSet<>();
 
     @ManyToMany
+    @JoinTable(name = "BrandProduct", joinColumns = @JoinColumn(name = "ProductID"), inverseJoinColumns = @JoinColumn(name = "BrandID"))
     private Set<Brand> brands = new HashSet<>();
 
     public Product() {

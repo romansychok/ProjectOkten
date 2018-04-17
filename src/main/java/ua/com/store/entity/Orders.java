@@ -6,8 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "Orders")
-public class Orders extends AbstractEntity{
+public class Orders extends AbstractEntity {
 
 
     private LocalDateTime localDateTime;
@@ -17,6 +16,7 @@ public class Orders extends AbstractEntity{
     private User user;
 
     @ManyToMany
+    @JoinTable(name = "OrderProduct", joinColumns = @JoinColumn(name = "OrderID"), inverseJoinColumns = @JoinColumn(name = "ProductID"))
     private List<Product> products = new ArrayList<>();
 
     public Orders() {

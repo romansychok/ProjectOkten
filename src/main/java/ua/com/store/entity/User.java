@@ -8,6 +8,8 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class User implements UserDetails {
@@ -20,6 +22,16 @@ public class User implements UserDetails {
     private String username;
     private String password;
     private String userImage;
+
+
+    @OneToMany(mappedBy = "user")
+    private Set<Orders> orders = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(name = "UserProduct", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "ProductID"))
+    private Set<Product> products = new HashSet<>();
+
+
 
 
     @Enumerated(EnumType.STRING)

@@ -25,8 +25,8 @@ public class CountryValidator implements Validator {
             if (country.getCountryName().isEmpty()){
                 errors.rejectValue("countryName","","empty field");
             }
-//           else if (countryDAO.findByCountryName(country.getCountryName()) != null){
-//                errors.rejectValue("countryName","","This country already exist");
-//            }
+            else if (countryDAO.findByCountryName(country.getCountryName()) != null){
+                errors.rejectValue("countryName","","This country already exist");
+            }
     }
 }

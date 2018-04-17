@@ -45,7 +45,7 @@ public class CountryController {
             return "country";
         }
         countryService.save(country);
-        return "index";
+        return "country";
     }
 
 
