@@ -24,11 +24,10 @@ public class Product extends AbstractEntity {
     private Set<User> users = new HashSet<>();
 
     @ManyToMany
-    @JoinTable(name = "ProductOrder" , joinColumns = @JoinColumn(name = "ProductID"), inverseJoinColumns = @JoinColumn(name = "OrderID"))
+    @JoinTable(name = "ProductOrder" , joinColumns = @JoinColumn(name = "ProductID"))
     private Set<Orders> orders = new HashSet<>();
 
     @ManyToMany
-    @JoinTable(name = "BrandProduct", joinColumns = @JoinColumn(name = "ProductID"), inverseJoinColumns = @JoinColumn(name = "BrandID"))
     private Set<Brand> brands = new HashSet<>();
 
     public Product() {

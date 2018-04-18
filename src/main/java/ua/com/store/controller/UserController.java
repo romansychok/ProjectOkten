@@ -9,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import ua.com.store.dto.UserProductDTO;
 import ua.com.store.entity.Product;
 import ua.com.store.entity.User;
 import ua.com.store.service.UserService;
@@ -18,6 +19,8 @@ import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.security.Principal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class UserController {
@@ -102,6 +105,18 @@ public class UserController {
 
     @GetMapping("users")
     public String users(Model model){
+//        List<User> users = userService.findAllWithProducts();
+//        List<UserProductDTO> dtos = new ArrayList<>();
+//        for (User user : users) {
+//            UserProductDTO dto = new UserProductDTO();
+//            dto.setIdUser(user.getId());
+//            dto.setUsername(user.getUsername());
+//            dto.setUserPassoword(user.getPassword());
+//            dto.setUserPhoto(user.getUserImage());
+//            dto.setIdProduct(user.getProducts());
+//        }
+//
+
         model.addAttribute("users",userService.findAll());
         return "users";
     }
