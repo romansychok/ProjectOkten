@@ -22,15 +22,6 @@ public class CountryController {
     private CountryValidator countryValidator;
 
 
-//
-//    @PostMapping("/saveCountry")
-//    public String save(@RequestParam("countryName") String countryName){
-//        Country country = new Country();
-//        country.setCountryName(countryName);
-//        countryService.save(country);
-//        return "country";
-//
-//   }
 
     @GetMapping("/country")
     public String next(Model model){

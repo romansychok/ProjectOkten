@@ -38,6 +38,14 @@ public class CategoryController {
         return "category";
     }
 
+    @GetMapping("/categories")
+    public String categories(Model model){
+        model.addAttribute("categories", categoryService.findAll());
+        return "categories";
+    }
+
+
+
     @InitBinder
     public void bind(WebDataBinder binder){
         binder.addValidators(categoryValidator);

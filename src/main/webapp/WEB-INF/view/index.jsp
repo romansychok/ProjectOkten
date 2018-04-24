@@ -6,15 +6,15 @@ Index page
 <br>
 <br>
 <br>
-<form  action="/save" method="post"  enctype="multipart/form-data">
-    <input type="text" name="username" placeholder="name">
-    <input type="password" name="password" placeholder="password">
-    <input type="file" name="userImage" placeholder="userImage">
-    <input type="submit" value="save">
-    <input type="hidden"
-           name="${_csrf.parameterName}"
-           value="${_csrf.token}"/>
-</form>
+<%--<form  action="/save" method="post"  enctype="multipart/form-data">--%>
+    <%--<input type="text" name="username" placeholder="name">--%>
+    <%--<input type="password" name="password" placeholder="password">--%>
+    <%--<input type="file" name="userImage" placeholder="userImage">--%>
+    <%--<input type="submit" value="save">--%>
+    <%--<input type="hidden"--%>
+           <%--name="${_csrf.parameterName}"--%>
+           <%--value="${_csrf.token}"/>--%>
+<%--</form>--%>
 <br>
 <a href="/loginUp">sf form</a>
 <br>
@@ -33,5 +33,5 @@ Index page
 <br>
 <br>
 <br>
-<a href="/indexNext">Next</a>
+<a href="/indexNext">registration</a>
 <%@include file="tmp/footer.jsp"%>

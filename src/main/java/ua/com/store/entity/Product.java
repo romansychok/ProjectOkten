@@ -33,6 +33,15 @@ public class Product extends AbstractEntity {
     public Product() {
     }
 
+    public Product(String productName, String nameOfBrand, String description, int price, int quantity, String pathImage) {
+        this.productName = productName;
+        this.nameOfBrand = nameOfBrand;
+        this.description = description;
+        this.price = price;
+        this.quantity = quantity;
+        this.pathImage = pathImage;
+    }
+
     public Product(String productName, String nameOfBrand, String description,
                    int price, int quantity, String pathImage, Category category) {
         this.productName = productName;
@@ -137,7 +146,6 @@ public class Product extends AbstractEntity {
                 ", price=" + price +
                 ", quantity=" + quantity +
                 ", pathImage='" + pathImage + '\'' +
-                ", category=" + category +
                 '}';
     }
 }

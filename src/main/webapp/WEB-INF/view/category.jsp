@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="tmp/header.jsp"%>
 
 Category
@@ -18,5 +19,6 @@ Category
            <%--name="${_csrf.parameterName}"--%>
            <%--value="${_csrf.token}"/>--%>
 <%--</form>--%>
-
+<br>
+<a href="/categories">All categories</a>
 <%@include file="tmp/footer.jsp"%>

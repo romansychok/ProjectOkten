@@ -38,28 +38,28 @@ public class UserController {
 
 
 
-    @PostMapping("/save")
-    public String save(@RequestParam("username") String username, @RequestParam("password") String password,
-                       @RequestParam("userImage")MultipartFile multipartFile)  {
-
-
-
-       String path = System.getProperty("user.home") + File.separator + "projectImages\\";
-
-        try {
-            multipartFile.transferTo(new File(path + multipartFile.getOriginalFilename()));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(password);
-       user.setUserImage("\\images\\" + multipartFile.getOriginalFilename());
-       userService.save(user);
-
-        return "redirect:/";
-
-    }
+//    @PostMapping("/save")
+//    public String save(@RequestParam("username") String username, @RequestParam("password") String password,
+//                       @RequestParam("userImage")MultipartFile multipartFile)  {
+//
+//
+//
+//       String path = System.getProperty("user.home") + File.separator + "projectImages\\";
+//
+//        try {
+//            multipartFile.transferTo(new File(path + multipartFile.getOriginalFilename()));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        User user = new User();
+//        user.setUsername(username);
+//        user.setPassword(password);
+//       user.setUserImage("\\images\\" + multipartFile.getOriginalFilename());
+//       userService.save(user);
+//
+//        return "redirect:/";
+//
+//    }
 
 
     @PostMapping("/saveUser")
