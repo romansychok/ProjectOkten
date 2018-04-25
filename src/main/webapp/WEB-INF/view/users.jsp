@@ -7,5 +7,8 @@ All users page
     <a href="/user-${user.id}">${user.username}</a><br>
 </c:forEach>
 
+<%--<c:forEach items="${products}" var="product">--%>
+    <%--${product.productName}--%>
+<%--</c:forEach>--%>
 
 <%@include file="tmp/footer.jsp"%>

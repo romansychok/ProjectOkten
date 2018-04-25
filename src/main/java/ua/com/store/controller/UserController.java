@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import ua.com.store.dto.UserProductDTO;
 import ua.com.store.entity.Product;
 import ua.com.store.entity.User;
+import ua.com.store.service.ProductService;
 import ua.com.store.service.UserService;
 import ua.com.store.validator.UserValidator;
 
@@ -30,6 +31,9 @@ public class UserController {
 
     @Autowired
     private UserValidator userValidator;
+
+//    @Autowired
+//    private ProductService productService;
 
     @GetMapping("/")
     public String home(Model model){
@@ -118,6 +122,7 @@ public class UserController {
 //
 
         model.addAttribute("users",userService.findAll());
+//        model.addAttribute("products",productService.findAll());
         return "users";
     }
 

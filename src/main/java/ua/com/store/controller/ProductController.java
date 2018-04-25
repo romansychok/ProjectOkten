@@ -52,6 +52,13 @@ public class ProductController {
         return "product";
     }
 
+
+    @GetMapping("/products")
+    public String products(Model model){
+        model.addAttribute("products", productService.findAll());
+        return "products";
+    }
+
     @InitBinder
     public void init(WebDataBinder binder){
         binder.registerCustomEditor(Category.class, new CategoryEditor());
