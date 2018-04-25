@@ -1,9 +1,11 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@include file="tmp/header.jsp"%>
+<jsp:include page="tmp/header.jsp"/>
+<link rel="stylesheet" type="text/css" href="static/styles/style.css">
 
-
-Index page
+<div class="indexPage">
+    <h1>Index page</h1>
+</div>
 <br>
 <%--<br>--%>
 <%--<a href="/loginUp">sf form</a>--%>
@@ -77,4 +79,4 @@ Index page
 
 </div>
 
-<%@include file="tmp/footer.jsp"%>
+<jsp:include page="tmp/footer.jsp"/>

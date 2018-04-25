@@ -1,8 +1,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@include file="tmp/header.jsp"%>
 
+
 <h3>Registration</h3>
-<div class="container">
+<div class="registrationForm">
 <form:form action="/saveUser" method="post" modelAttribute="eUser" enctype="multipart/form-data">
     <tr>
         <br>

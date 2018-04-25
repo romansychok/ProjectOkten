@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <html>
 <head>
+
     <title>${title}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -10,7 +11,6 @@
 
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <link href="../css/sticky-footer.css" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -20,5 +20,10 @@
 
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
 
+    <link rel="stylesheet" type="text/css" href="/static/styles/style.css"  >
+
+
+
 </head>
 <body>
+
