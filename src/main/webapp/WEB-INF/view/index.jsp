@@ -1,31 +1,12 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="tmp/header.jsp"/>
-<link rel="stylesheet" type="text/css" href="static/styles/style.css">
+
 
 <div class="indexPage">
     <h1>Index page</h1>
 </div>
 <br>
-<%--<br>--%>
-<%--<a href="/loginUp">sf form</a>--%>
-<%--<br>--%>
-<%--<a href="/login">log in</a>--%>
-<%--<br>--%>
-<%--<a href="/users">users page</a>--%>
-<%--<br>--%>
-<%--<a href="/category">category</a>--%>
-<%--<br>--%>
-<%--<a href="/product">product</a>--%>
-<%--<br>--%>
-<%--<a href="/country">country</a>--%>
-<%--<br>--%>
-<%--<a href="/brand">brand</a>--%>
-<%--<br>--%>
-<%--<br>--%>
-<%--<br>--%>
-<%--<br>--%>
-<%--<a href="/indexNext">registration</a>--%>
 
 <div class="container">
     <div class="page-header">

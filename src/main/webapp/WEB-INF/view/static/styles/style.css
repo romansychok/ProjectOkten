@@ -13,12 +13,32 @@ body {
     height: 60px;
     background-color: #f5f5f5;
 }
+
+.custom-container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+}
+.custom-container .text-muted {
+    margin: 20px 0;
+}
+
+.title_position {
+    text-align: center;
+    font-size: xx-large;
+}
+.menu-size{
+    font-size: 20px;
+}
 .registrationForm{
     background: lime;
     text-align: center;
 }
 
-.shit{
+.production_Page{
     margin-left: 500px;
 }
 
+.indexPage{
+    margin-left: 500px;
+}
