@@ -14,7 +14,7 @@ import java.io.File;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("ua.com.store")
+@ComponentScan("ua.com.store.*")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 
@@ -28,6 +28,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setPrefix("/WEB-INF/view/");
         viewResolver.setSuffix(".jsp");
+        viewResolver.setContentType("text/html; charset=UTF-8");
         return viewResolver;
     }
 
@@ -38,5 +39,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                     .addResourceLocations("/static/images");
             registry.addResourceHandler("/images/**")
                     .addResourceLocations("file:" + System.getProperty("user.home") + File.separator + "projectImages\\");
+            registry.addResourceHandler("/css/**")
+                    .addResourceLocations("/static/styles/");
     }
 }
