@@ -1299,61 +1299,71 @@ orders_id</ColNames>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="249" name="enabled">
+    <column id="311" parent="249" name="email">
       <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="312" parent="249" name="enabled">
+      <Position>7</Position>
       <DataType>bit(1)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="249" name="password">
-      <Position>7</Position>
-      <DataType>varchar(255)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="313" parent="249" name="userImage">
+    <column id="313" parent="249" name="password">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="249" name="username">
+    <column id="314" parent="249" name="repeatPassword">
       <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="315" parent="249" name="userImage">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="316" parent="249" name="username">
+      <Position>11</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="315" parent="249" name="PRIMARY">
+    <key id="317" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="316" parent="250" name="ProductID">
+    <column id="318" parent="250" name="ProductID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="250" name="UserID">
+    <column id="319" parent="250" name="UserID">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="318" parent="250" name="FK1fy3s4g9ccx8ey7aihbpocvbl">
+    <index id="320" parent="250" name="FK1fy3s4g9ccx8ey7aihbpocvbl">
       <ColNames>ProductID</ColNames>
     </index>
-    <key id="319" parent="250" name="PRIMARY">
+    <key id="321" parent="250" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>UserID
 ProductID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="320" parent="250" name="FK1fy3s4g9ccx8ey7aihbpocvbl">
+    <foreign-key id="322" parent="250" name="FK1fy3s4g9ccx8ey7aihbpocvbl">
       <ColNames>ProductID</ColNames>
       <RefSchemaName>mywebstore</RefSchemaName>
       <RefTableName>product</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="321" parent="250" name="FK81usmr4pm4ky77nlvtdor5o0h">
+    <foreign-key id="323" parent="250" name="FK81usmr4pm4ky77nlvtdor5o0h">
       <ColNames>UserID</ColNames>
       <RefSchemaName>mywebstore</RefSchemaName>
       <RefTableName>user</RefTableName>

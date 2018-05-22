@@ -6,7 +6,9 @@
     <h1>Production Page!!!</h1>
 </div>
 <c:forEach items="${products}" var="product">
-    <a href="/produtct-${product.id}">${product.productName}</a><<br>
+    <img class="productImage" src="${product.pathImage}">
+    <a class="production_Page" href="/product-${product.id}">${product.productName}
+        </a><br>
 </c:forEach>
 
 <%@include file="tmp/footer.jsp"%>

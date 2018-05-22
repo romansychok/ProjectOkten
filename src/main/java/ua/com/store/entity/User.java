@@ -21,8 +21,9 @@ public class User implements UserDetails {
     @NotNull
     private String username;
     private String password;
+    private String repeatPassword;
     private String userImage;
-
+    private String email;
 
     @OneToMany(mappedBy = "user")
     private Set<Orders> orders = new HashSet<>();
@@ -82,6 +83,13 @@ public class User implements UserDetails {
         this.password = password;
     }
 
+    public User(String username, String password, String repeatPassword, String email) {
+        this.username = username;
+        this.password = password;
+        this.repeatPassword = repeatPassword;
+        this.email = email;
+    }
+
     public int getId() {
         return id;
     }
@@ -104,6 +112,15 @@ public class User implements UserDetails {
         return userImage;
     }
 
+
+    public String getRepeatPassword() {
+        return repeatPassword;
+    }
+
+    public void setRepeatPassword(String repeatPassword) {
+        this.repeatPassword = repeatPassword;
+    }
+
     public void setUserImage(String userImage) {
         this.userImage = userImage;
     }
@@ -116,6 +133,15 @@ public class User implements UserDetails {
         this.password = password;
     }
 
+
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public Set<Orders> getOrders() {
         return orders;

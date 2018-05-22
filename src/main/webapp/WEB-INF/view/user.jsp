@@ -3,10 +3,10 @@
 User page
 <br>
 <hr>
-Hello, ${user.username}
+<h1>Hello, ${user.username}</h1>
 <br>
 <br>
 <br>
-<img src="${user.userImage}" alt="${user.username}">
+<img class="userPhoto" src="${user.userImage}" alt="${user.username}">
 
 <%@include file="tmp/footer.jsp"%>

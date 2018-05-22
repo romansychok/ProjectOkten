@@ -24,6 +24,9 @@ public class UserValidator implements Validator {
         else if (user.getPassword().isEmpty()){
             errors.rejectValue("password","","Password field is empty");
         }
+        else if (!user.getPassword().equals(user.getRepeatPassword())){
+            errors.rejectValue("repeatPassword","","Please enter password again!");
+        }
 
 
     }

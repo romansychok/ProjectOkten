@@ -31,15 +31,58 @@ body {
     font-size: 20px;
 }
 .registrationForm{
-    background: lime;
-    text-align: center;
+
 }
 
 .production_Page{
-    margin-left: 500px;
+    margin-left: 22px;
+    font-size: 22px;
 }
 
 .indexPage{
     margin-left: 500px;
     color: red;
+}
+
+.showProducts{
+    margin-left: 220px;
+    font-size: 22px;
+}
+
+.showUsers{
+    font-size: 22px;
+    margin-left: 12px;
+}
+
+.showCategories{
+    font-size: 22px;
+    margin-left: 12px;
+}
+
+.registration{
+    font-size: 22px;
+    margin-left: 12px;
+}
+
+.userPhoto{
+    width: 250px;
+    height: 250px;
+}
+
+.userName{
+    font-size: 27px;
+}
+
+.productImage{
+    margin-left: 20px;
+    width: 111px;
+    height: 111px;
+}
+
+.userNameForm{
+   margin-left: 72px;
+}
+
+.userPasswordForm{
+  margin-left: 43px;
 }
