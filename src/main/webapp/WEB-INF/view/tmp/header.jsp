@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
 
 
-    <link rel="stylesheet" type="text/css" href="pavlo/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
 

@@ -5,6 +5,14 @@ html {
 body {
     margin-bottom: 60px;
 }
+
+.header{
+    width: 100%;
+    height: 70px;
+    /*margin-top: 20px;*/
+    background-color: lightslategrey;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -40,7 +48,7 @@ body {
 }
 
 .indexPage{
-    margin-left: 500px;
+    margin-left: 570px;
     color: red;
 }
 
@@ -85,4 +93,30 @@ body {
 
 .userPasswordForm{
   margin-left: 43px;
+}
+
+.menu{
+    background-color: #28a4c9;
+    overflow: hidden;
+    margin-left: 47px;
+    margin-right: 47px;
+}
+
+.menu a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.menu a:hover{
+    background-color: #23527c;
+    color: silver;
+}
+
+.menu a.active{
+    background-color: blue;
+    color: white;
 }

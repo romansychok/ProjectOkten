@@ -3,18 +3,20 @@
 
 <jsp:include page="tmp/header.jsp"/>
 
+<div class="header">
+  
+</div>
 
 <div class="indexPage">
     <h1>Index page</h1>
 </div>
 <br>
-    <a class="showProducts" href="/products">Products</a>
-    <a class="showUsers" href="/users">Users</a>
-    <a class="showCategories" href="/categories>">Categories</a>
-    <a class="registration" href="/indexNext">Registration</a>
-
-
-
+        <div class="menu">
+            <a class="active" href="/products">Products</a>
+            <a href="/users">Users</a></li>
+            <a href="/categories>">Categories</a>
+            <a href="/indexNext">Registration</a>
+        </div>
 
 
 

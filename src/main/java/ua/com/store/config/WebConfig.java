@@ -39,7 +39,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 .addResourceLocations("/static/images");
         registry.addResourceHandler("/images/**")
                 .addResourceLocations("file:" + System.getProperty("user.home") + File.separator + "projectImages\\");
-        registry.addResourceHandler("/pavlo/**")
+        registry.addResourceHandler("/css/**")
                 .addResourceLocations("/WEB-INF/view/static/styles/");
     }
 }
