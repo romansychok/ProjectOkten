@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@include file="tmp/header.jsp"%>
+<%@include file="../tmp/header.jsp"%>
 
 All categories
 <br>
@@ -10,4 +10,4 @@ All categories
 </c:forEach>
 
 
-<%@include file="tmp/footer.jsp"%>
+<%@include file="../tmp/footer.jsp"%>

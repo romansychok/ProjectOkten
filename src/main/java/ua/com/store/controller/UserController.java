@@ -37,33 +37,12 @@ public class UserController {
 
     @GetMapping("/")
     public String home(Model model){
-        return "index";
+        return "/mainView/index";
     }
 
 
 
-//    @PostMapping("/save")
-//    public String save(@RequestParam("username") String username, @RequestParam("password") String password,
-//                       @RequestParam("userImage")MultipartFile multipartFile)  {
-//
-//
-//
-//       String path = System.getProperty("user.home") + File.separator + "projectImages\\";
-//
-//        try {
-//            multipartFile.transferTo(new File(path + multipartFile.getOriginalFilename()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        User user = new User();
-//        user.setUsername(username);
-//        user.setPassword(password);
-//       user.setUserImage("\\images\\" + multipartFile.getOriginalFilename());
-//       userService.save(user);
-//
-//        return "redirect:/";
-//
-//    }
+
 
 
     @PostMapping("/saveUser")
@@ -90,7 +69,7 @@ public class UserController {
     @GetMapping("/indexNext")
     public String next(Model model){
         model.addAttribute("eUser", new User());
-        return "indexNext";
+        return "/mainView/indexNext";
     }
 
 
@@ -98,13 +77,13 @@ public class UserController {
     @GetMapping("/adm")
     public String admin(Principal principal, Model model){
         model.addAttribute("user",principal);
-        return "admin";
+        return "/adminView/admin";
     }
 
 
     @GetMapping("login")
     public String login(){
-        return "login";
+        return "/mainView/login";
     }
 
     @GetMapping("users")
@@ -123,14 +102,14 @@ public class UserController {
 
         model.addAttribute("users",userService.findAll());
 //        model.addAttribute("products",productService.findAll());
-        return "users";
+        return "/userView/users";
     }
 
     @GetMapping("/user-{id}")
     public String user(@PathVariable("id") int id,Model model){
         User one = userService.findOne(id);
         model.addAttribute("user",one);
-        return "user";
+        return "userView/user";
     }
 
     @InitBinder

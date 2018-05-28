@@ -1,10 +1,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<jsp:include page="tmp/header.jsp"/>
+<%@include file="../tmp/header.jsp"%>
+
 
 <div class="header">
-  
+    <div class="contacts">
+
+    </div>
 </div>
 
 <div class="indexPage">
@@ -13,11 +16,12 @@
 <br>
         <div class="menu">
             <a class="active" href="/products">Products</a>
-            <a href="/users">Users</a></li>
+            <a href="/users">Users</a>
             <a href="/categories>">Categories</a>
             <a href="/indexNext">Registration</a>
+            <a href="/category">Category</a>
         </div>
 
 
 
-<jsp:include page="tmp/footer.jsp"/>
+<%@include file="../tmp/footer.jsp"%>

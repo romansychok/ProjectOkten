@@ -25,23 +25,23 @@ public class CategoryController {
     @GetMapping("/category")
     public String next(Model model){
         model.addAttribute("eCategory", new Category());
-        return "category";
+        return "/categoryView/category";
     }
 
     @PostMapping("/saveCategory")
     public String saveCategory(@ModelAttribute("eCategory") @Valid Category category, BindingResult result){
         if (result.hasErrors()){
             System.out.println("Category has errorrrrrrr");
-            return "category";
+            return "/categoryView/category";
         }
         categoryService.save(category);
-        return "category";
+        return "/categoryView/category";
     }
 
     @GetMapping("/categories")
     public String categories(Model model){
         model.addAttribute("categories", categoryService.findAll());
-        return "categories";
+        return "/categoryView/categories";
     }
 
 

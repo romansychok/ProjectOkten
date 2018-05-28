@@ -34,7 +34,7 @@ public class ProductController {
     @GetMapping("/product")
     public String next(Model model){
         model.addAttribute("eProduct",new Product());
-        return "product";
+        return "/productView/product";
     }
 
     @PostMapping("/saveProduct")
@@ -49,14 +49,14 @@ public class ProductController {
     }
         product.setPathImage("\\images\\" + multipartFile.getOriginalFilename());
         productService.save(product);
-        return "product";
+        return "/productView/product";
     }
 
 
     @GetMapping("/products")
     public String products(Model model){
         model.addAttribute("products", productService.findAll());
-        return "products";
+        return "/productView/products";
     }
 
     @InitBinder

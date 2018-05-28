@@ -1,5 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@include file="tmp/header.jsp"%>
+<%@include file="../tmp/header.jsp"%>
 
 Product details
 <%--<form action="/saveProduct" method="post">--%>
@@ -28,4 +28,4 @@ Product details
 </form:form>
 <%--<form:form modelAttribute="saveProduct" method="post"--%>
 
-<%@include file="tmp/footer.jsp"%>
+<%@include file="../tmp/footer.jsp"%>

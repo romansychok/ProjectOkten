@@ -1,5 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@include file="tmp/header.jsp"%>
+<%@include file="../tmp/header.jsp"%>
 
 
 <h3>Registration</h3>
@@ -33,4 +33,4 @@
 </form:form>
 </div>
 
-<%@include file="tmp/footer.jsp"%>
+<%@include file="../tmp/footer.jsp"%>

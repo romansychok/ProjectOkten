@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@include file="tmp/header.jsp"%>
+<%@include file="../tmp/header.jsp"%>
 
 Country
 <br>
@@ -22,4 +22,4 @@ Country
     ${country.countryName}<br>
 </c:forEach>
 
-<%@include file="tmp/footer.jsp"%>
+<%@include file="../tmp/footer.jsp"%>

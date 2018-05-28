@@ -26,17 +26,17 @@ public class CountryController {
     @GetMapping("/country")
     public String next(Model model){
         model.addAttribute("eCountry",new Country());
-        return "country";
+        return "/countryView/country";
     }
 
     @PostMapping("/saveCountry")
     public String saveCountry(@ModelAttribute("eCountry") @Valid Country country,BindingResult result){
         if (result.hasErrors()){
             System.out.println("country error");
-            return "country";
+            return "/countryView/country";
         }
         countryService.save(country);
-        return "country";
+        return "/countryView/country";
     }
 
 
