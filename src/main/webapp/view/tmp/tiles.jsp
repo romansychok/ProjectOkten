@@ -1,36 +1,32 @@
-<%--&lt;%&ndash;--%>
-  <%--Created by IntelliJ IDEA.--%>
-  <%--User: Home--%>
-  <%--Date: 07.05.2018--%>
-  <%--Time: 17:18--%>
-  <%--To change this template use File | Settings | File Templates.--%>
-<%--&ndash;%&gt;--%>
-<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
-<%--<html>--%>
-<%--<head>--%>
-    <%--<title>Title</title>--%>
+<div class="boxIndex">
 
-    <%--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />--%>
+    <div class="access">
+        <a  class="registrationAccess" href="/indexNext">Registration</a>
+        <a href="/login">Authorization</a>
+    </div>
 
-    <%--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">--%>
+    <div class="header">
+        <img src="https://www.webpagefx.com/blog/web-design/logotypewordmark-logos-30-creative-examples/">
 
-    <%--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">--%>
+        <%--<p class="indexPage">Index page</p>--%>
 
-    <%--<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>--%>
+    </div>
+
+    <br>
+    <div class="menu">
+        <a class="active" href="/products">Products</a>
+        <a href="/users">Users</a>
+        <a href="/categories>">Categories</a>
+        <a href="/indexNext">Registration</a>
+        <a href="/category">Category</a>
+    </div>
+
+    <br>
+    <div class="left">
+        <li><a href="/users">users</a> </li>
+    </div>
 
 
-    <%--<script src="https://code.jquery.com/jquery-3.1.1.min.js"--%>
-            <%--integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="--%>
-            <%--crossorigin="anonymous"></script>--%>
 
-    <%--<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>--%>
 
-    <%--<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">--%>
-
-    <%--<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/styles/style.css">--%>
-
-<%--</head>--%>
-<%--<body>--%>
-
-<%--</body>--%>
-<%--</html>--%>
+</div>

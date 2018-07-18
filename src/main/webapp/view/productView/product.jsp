@@ -15,11 +15,11 @@ Product details
            <%--value="${_csrf.token}"/>--%>
 <%--</form>--%>
 <form:form action="/saveProduct" method="post" modelAttribute="eProduct" enctype="multipart/form-data">
-    <form:input path="productName"/>
-    <form:input path="nameOfBrand"/>
-    <form:input path="description"/>
-    <form:input path="price"/>
-    <form:input path="quantity"/>
+    <form:input path="productName" placeholder="productName"/>
+    <form:input path="nameOfBrand" placeholder="nameOfBrand"/>
+    <form:input path="description" placeholder="description"/>
+    <form:input path="price" placeholder="price"/>
+    <form:input path="quantity" placeholder="quantity"/>
     <input type="file" name="pathImage">
     <input type="submit">
 

@@ -23,8 +23,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void delete(Product product) {
-            dao.delete(product);
+    public void delete(int id) {
+            dao.delete(id);
     }
 
     @Override
@@ -35,6 +35,11 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product findOne(int id) {
         return dao.findOne(id);
+    }
+
+    @Override
+    public void update(Product product) {
+        dao.save(product);
     }
 
 

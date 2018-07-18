@@ -49,13 +49,26 @@ public class ProductController {
     }
         product.setPathImage("\\images\\" + multipartFile.getOriginalFilename());
         productService.save(product);
-        return "/productView/product";
+        return "/mainView/index";
     }
 
+
+    @GetMapping("/product-{id}")
+    public String productPage(@PathVariable("id") int id, Model model){
+        Product product = productService.findOne(id);
+        model.addAttribute("product",product);
+        return "/productView/productPage";
+    }
 
     @GetMapping("/products")
     public String products(Model model){
         model.addAttribute("products", productService.findAll());
+        return "/productView/products";
+    }
+
+    @GetMapping("/deleteProduct/{id}")
+    public String delete(@PathVariable int id){
+        productService.delete(id);
         return "/productView/products";
     }
 

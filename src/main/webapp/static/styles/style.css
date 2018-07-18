@@ -8,8 +8,7 @@ body {
 
 .header{
     width: 100%;
-    height: 70px;
-    /*margin-top: 20px;*/
+    height: 105px;
     background-color: lightslategrey;
 }
 
@@ -17,6 +16,11 @@ body {
     background: lime;
     width: 25px;
     height: 25px;
+}
+
+.logotype {
+    display: block;
+    margin-left: 200px;
 }
 
 .footer {
@@ -48,13 +52,25 @@ body {
 
 }
 
+.access{
+    text-align: right;
+    font-weight: bold;
+
+}
+
+.registrationAccess{
+    padding-right: 8px;
+}
+
 .production_Page{
     margin-left: 22px;
     font-size: 22px;
 }
 
 .indexPage{
-    margin-left: 570px;
+    margin-left: 970px;
+    padding-top: 70px;
+    font-size: 25px;
     color: red;
 }
 
@@ -75,7 +91,8 @@ body {
 
 .registration{
     font-size: 22px;
-    margin-left: 12px;
+    margin-right: 12px;
+    float: right;
 }
 
 .userPhoto{
@@ -97,6 +114,10 @@ body {
    margin-left: 72px;
 }
 
+.userEmailForm{
+    margin-left: 72px;
+}
+
 .userPasswordForm{
   margin-left: 43px;
 }
@@ -112,9 +133,9 @@ body {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 31px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 .menu a:hover{
@@ -125,4 +146,26 @@ body {
 .menu a.active{
     background-color: blue;
     color: white;
+}
+
+
+.boxIndex{
+    width: 1160px;
+    height: 3855px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.left{
+    width: 235px;
+    height: 500px;
+    background-color: khaki;
+}
+
+.right{
+    margin-left: 1000px;
+    width: 206px;
+    height: 500px;
+    background-color: darkkhaki;
 }

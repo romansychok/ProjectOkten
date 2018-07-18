@@ -12,6 +12,12 @@
         <td><form:errors path="username"/></td>
     </div>
     <br>
+    <div class="userEmailForm">
+        <form:label path="email">Email</form:label>
+        <form:input path="email"/>
+        <form:errors path="email"/>
+    </div>
+    <br>
     <div class="userPasswordForm">
         <form:label path="password">Password</form:label>
         <form:input path="password"/>
@@ -30,6 +36,9 @@
         <br>
         <td colspan="2"> <input type="submit"> </td>
     </tr>
+    <input type="hidden"
+           name="${_csrf.parameterName}"
+           value="${_csrf.token}"/>
 </form:form>
 </div>
 

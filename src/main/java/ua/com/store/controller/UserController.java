@@ -2,17 +2,13 @@ package ua.com.store.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.method.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import ua.com.store.dto.UserProductDTO;
-import ua.com.store.entity.Product;
 import ua.com.store.entity.User;
-import ua.com.store.service.ProductService;
 import ua.com.store.service.UserService;
 import ua.com.store.validator.UserValidator;
 
@@ -20,8 +16,6 @@ import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.security.Principal;
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class UserController {
@@ -112,10 +106,10 @@ public class UserController {
         return "userView/user";
     }
 
-    @InitBinder
-    public void bind(WebDataBinder binder){
-        binder.addValidators(userValidator);
-    }
+//    @InitBinder
+//    public void bind(WebDataBinder binder){
+//        binder.addValidators(userValidator);
+//    }
 
 
 

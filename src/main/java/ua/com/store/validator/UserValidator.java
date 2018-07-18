@@ -21,6 +21,9 @@ public class UserValidator implements Validator {
         if (user.getUsername().isEmpty()){
             errors.rejectValue("username","","Field is empty");
         }
+        else if (user.getEmail().isEmpty()){
+            errors.rejectValue("email", "","Please enter your email address");
+        }
         else if (user.getPassword().isEmpty()){
             errors.rejectValue("password","","Password field is empty");
         }

@@ -8,7 +8,9 @@
 <c:forEach items="${products}" var="product">
     <img class="productImage" src="${product.pathImage}">
     <a class="production_Page" href="/product-${product.id}">${product.productName}
+        <a  class="production_Page" href="/deleteProduct/${product.id}">Delete</a>
         </a><br>
+
 </c:forEach>
 
 <%@include file="../tmp/footer.jsp"%>
