@@ -8,6 +8,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import ua.com.store.entity.Category;
 import ua.com.store.service.CategoryService;
+import ua.com.store.service.ProductService;
 import ua.com.store.validator.CategoryValidator;
 
 import javax.validation.Valid;
@@ -17,6 +18,9 @@ public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
+
+    @Autowired
+    private ProductService productService;
 
     @Autowired
     private CategoryValidator categoryValidator;
@@ -44,6 +48,20 @@ public class CategoryController {
         return "/categoryView/categories";
     }
 
+
+    @GetMapping("/category-{id}")
+    public String category(@PathVariable("id") int id, Model model){
+        Category category = categoryService.findOne(id);
+        model.addAttribute("category",category);
+        return "/categoryView/categoryPage";
+    }
+
+
+    @GetMapping("/categoryPage")
+    public String categoryPage(Model model){
+        model.addAttribute("categoryPage",productService.findAll());
+        return "/categoryView/categoryPage";
+    }
 
 
     @InitBinder

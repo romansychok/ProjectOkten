@@ -4,9 +4,10 @@
 <%@include file="../tmp/header.jsp"%>
 
 <div class="boxIndex">
-
     <div class="access">
-        <a  class="registrationAccess" href="/indexNext">Registration</a>
+        <p class="contact">+380954202454</p>
+        <p class="contact2">romansychok@gmail.com</p>
+        <a class="registrationAccess" href="/indexNext">Registration</a>
         <a href="/login">Authorization</a>
     </div>
 
@@ -21,7 +22,7 @@
         <div class="menu">
             <a class="active" href="/products">Products</a>
             <a href="/users">Users</a>
-            <a href="/categories>">Categories</a>
+            <a href="/categories">Categories</a>
             <a href="/indexNext">Registration</a>
             <a href="/category">Category</a>
             <a href="/product">product</a>

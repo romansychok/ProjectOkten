@@ -26,6 +26,6 @@ Product details
 
 
 </form:form>
-<%--<form:form modelAttribute="saveProduct" method="post"--%>
+
 
 <%@include file="../tmp/footer.jsp"%>

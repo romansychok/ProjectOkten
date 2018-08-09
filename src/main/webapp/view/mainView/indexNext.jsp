@@ -20,14 +20,15 @@
     <br>
     <div class="userPasswordForm">
         <form:label path="password">Password</form:label>
-        <form:input path="password"/>
+        <form:password path="password"/>
         <form:errors path="password"/>
     </div>
     <br>
     <div class="repeatPasswordForm">
-    <form:label path="repeatPassword">repeatPassword</form:label>
-    <form:input path="repeatPassword"/>
-    <form:errors path="repeatPassword"/>
+        <form:label path="repeatPassword">repeatPassword</form:label>
+        <form:password path="repeatPassword"/>
+        <form:errors path="repeatPassword"/>
+
     </div>
     <br>
     <br>

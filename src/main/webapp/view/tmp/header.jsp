@@ -29,7 +29,41 @@
 </head>
 <body>
 
+<%--<div class="boxIndex">--%>
+    <%--<div class="access">--%>
+        <%--<p class="contact">+380954202454</p>--%>
+        <%--<p class="contact2">romansychok@gmail.com</p>--%>
+        <%--<a class="registrationAccess" href="/indexNext">Registration</a>--%>
+        <%--<a href="/login">Authorization</a>--%>
+    <%--</div>--%>
 
+
+
+<%--<div class="header">--%>
+    <%--&lt;%&ndash;<img src="https://www.webpagefx.com/blog/web-design/logotypewordmark-logos-30-creative-examples/">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<p class="indexPage">Index page</p>&ndash;%&gt;--%>
+<%--</div>--%>
+
+<%--<br>--%>
+<%--<div class="menu">--%>
+    <%--<a class="active" href="/products">Products</a>--%>
+    <%--<a href="/users">Users</a>--%>
+    <%--<a href="/categories">Categories</a>--%>
+    <%--<a href="/indexNext">Registration</a>--%>
+    <%--<a href="/category">Category</a>--%>
+    <%--<a href="/product">product</a>--%>
+<%--</div>--%>
+
+
+    <%--&lt;%&ndash;<br>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;<div class="left">&ndash;%&gt;--%>
+        <%--&lt;%&ndash;<li><a href="/users">users</a> </li>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;</div>&ndash;%&gt;--%>
+
+
+
+
+</div>
 
 
 

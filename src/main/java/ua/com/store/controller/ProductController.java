@@ -72,6 +72,32 @@ public class ProductController {
         return "/productView/products";
     }
 
+
+    @GetMapping("/productUpdate")
+    public String productUpdate(Model model){
+        model.addAttribute("eProductUpdate", new Product());
+        return "/productView/productUpdate";
+    }
+
+    @PostMapping("/updateProduct}") //Not working well!!!
+    public String update(@ModelAttribute("eProductUpdate") Product product, BindingResult result,
+                         @RequestParam("pathImage") MultipartFile multipartFile){
+        String path = System.getProperty("user.home") + File.separator + "projectImages\\";
+
+        try {
+            multipartFile.transferTo(new File(path + multipartFile.getOriginalFilename()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        product.setPathImage("\\images\\" + multipartFile.getOriginalFilename());
+        productService.update(product);
+
+        return "/mainView/index";
+
+
+    }
+
+
     @InitBinder
     public void init(WebDataBinder binder){
         binder.registerCustomEditor(Category.class, new CategoryEditor());

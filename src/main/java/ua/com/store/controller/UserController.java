@@ -26,8 +26,6 @@ public class UserController {
     @Autowired
     private UserValidator userValidator;
 
-//    @Autowired
-//    private ProductService productService;
 
     @GetMapping("/")
     public String home(Model model){
@@ -36,15 +34,12 @@ public class UserController {
 
 
 
-
-
-
     @PostMapping("/saveUser")
     public String saveUser(@ModelAttribute("eUser")  @Valid User user ,BindingResult result,
                            @RequestParam("userImageX")MultipartFile multipartFile){
         if (result.hasErrors()){
             System.out.println("We have error!!!");
-            return "indexNext";
+            return "/mainView/indexNext";
         }
         String path = System.getProperty("user.home") + File.separator + "projectImages\\";
 
@@ -57,7 +52,7 @@ public class UserController {
         user.setUserImage("\\images\\" + multipartFile.getOriginalFilename());
         userService.save(user);
 
-        return "redirect:/";
+        return "/mainView/indexNext";
     }
 
     @GetMapping("/indexNext")
@@ -106,10 +101,10 @@ public class UserController {
         return "userView/user";
     }
 
-//    @InitBinder
-//    public void bind(WebDataBinder binder){
-//        binder.addValidators(userValidator);
-//    }
+    @InitBinder
+    public void bind(WebDataBinder binder){
+        binder.addValidators(userValidator);
+    }
 
 
 
