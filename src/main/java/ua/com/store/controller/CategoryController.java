@@ -26,20 +26,20 @@ public class CategoryController {
     private CategoryValidator categoryValidator;
 
 
-    @GetMapping("/category")
+    @GetMapping("/categoryAdmin")
     public String next(Model model){
         model.addAttribute("eCategory", new Category());
-        return "/categoryView/category";
+        return "/adminView/categoryAdmin";
     }
 
     @PostMapping("/saveCategory")
     public String saveCategory(@ModelAttribute("eCategory") @Valid Category category, BindingResult result){
         if (result.hasErrors()){
             System.out.println("Category has errorrrrrrr");
-            return "/categoryView/category";
+            return "/adminView/categoryAdmin";
         }
         categoryService.save(category);
-        return "/categoryView/category";
+        return "/mainView/index";
     }
 
     @GetMapping("/categories")
@@ -57,11 +57,9 @@ public class CategoryController {
     }
 
 
-    @GetMapping("/categoryPage")
-    public String categoryPage(Model model){
-        model.addAttribute("categoryPage",productService.findAll());
-        return "/categoryView/categoryPage";
-    }
+
+
+
 
 
     @InitBinder

@@ -3,12 +3,8 @@
 
 <h1>Hello World!!!</h1>
 
+<h3>${product.productName}</h3><br>
 
-<c:forEach items="${cateroryPage}" var="product">
-    <img class="productImage" src="${product.pathImage}">
-    <a class="production_Page" href="/product-${product.id}">${product.productName}</a>
-    <<br>
-</c:forEach>
 
 
 <%@include file="../tmp/footer.jsp"%>

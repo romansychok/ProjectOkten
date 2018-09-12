@@ -64,8 +64,8 @@ public class UserController {
 
 
     @GetMapping("/adm")
-    public String admin(Principal principal, Model model){
-        model.addAttribute("user",principal);
+    public String admin( Model model){
+        model.addAttribute("user");
         return "/adminView/admin";
     }
 

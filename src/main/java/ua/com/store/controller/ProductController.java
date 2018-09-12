@@ -31,10 +31,10 @@ public class ProductController {
 //
 //    }
 
-    @GetMapping("/product")
+    @GetMapping("/productAdmin")
     public String next(Model model){
         model.addAttribute("eProduct",new Product());
-        return "/productView/product";
+        return "/adminView/productAdmin";
     }
 
     @PostMapping("/saveProduct")
@@ -60,10 +60,10 @@ public class ProductController {
         return "/productView/productPage";
     }
 
-    @GetMapping("/products")
+    @GetMapping("/productsAdmin")
     public String products(Model model){
-        model.addAttribute("products", productService.findAll());
-        return "/productView/products";
+        model.addAttribute("productsAdmin", productService.findAll());
+        return "/adminView/productsAdmin";
     }
 
     @GetMapping("/deleteProduct/{id}")
@@ -76,7 +76,7 @@ public class ProductController {
     @GetMapping("/productUpdate")
     public String productUpdate(Model model){
         model.addAttribute("eProductUpdate", new Product());
-        return "/productView/productUpdate";
+        return "/adminView/productUpdate";
     }
 
     @PostMapping("/updateProduct}") //Not working well!!!

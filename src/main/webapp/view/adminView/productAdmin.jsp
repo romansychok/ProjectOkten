@@ -24,7 +24,6 @@ Product details
     <input type="submit">
 
 
-
 </form:form>
 
 

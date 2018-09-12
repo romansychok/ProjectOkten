@@ -20,12 +20,12 @@
 
 <br>
         <div class="menu">
-            <a class="active" href="/products">Products</a>
+            <a class="active" href="/productsAdmin">Products</a>
             <a href="/users">Users</a>
             <a href="/categories">Categories</a>
             <a href="/indexNext">Registration</a>
-            <a href="/category">Category</a>
-            <a href="/product">product</a>
+            <a href="/categoryAdmin">Category</a>
+            <a href="/productAdmin">product</a>
         </div>
 
     <br>
