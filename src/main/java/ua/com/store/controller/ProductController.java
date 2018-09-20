@@ -1,6 +1,7 @@
 package ua.com.store.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,6 +13,7 @@ import ua.com.store.entity.Category;
 import ua.com.store.entity.Product;
 import ua.com.store.service.ProductService;
 
+import javax.jws.WebParam;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
@@ -22,6 +24,7 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    private String pathImage;
 
 
 //    @PostMapping("/saveProduct")
@@ -69,7 +72,7 @@ public class ProductController {
     @GetMapping("/deleteProduct/{id}")
     public String delete(@PathVariable int id){
         productService.delete(id);
-        return "/productView/products";
+        return "/adminView/productsAdmin";
     }
 
 
@@ -79,23 +82,48 @@ public class ProductController {
         return "/adminView/productUpdate";
     }
 
-    @PostMapping("/updateProduct}") //Not working well!!!
-    public String update(@ModelAttribute("eProductUpdate") Product product, BindingResult result,
-                         @RequestParam("pathImage") MultipartFile multipartFile){
-        String path = System.getProperty("user.home") + File.separator + "projectImages\\";
+//    @PostMapping("/updateProduct") //Not working well!!!
+//    public String update(@ModelAttribute("eProductUpdate") Product product, BindingResult result,
+//                         @RequestParam("pathImage") MultipartFile multipartFile){
+//        String path = System.getProperty("user.home") + File.separator + "projectImages\\";
+//
+//        try {
+//            multipartFile.transferTo(new File(path + multipartFile.getOriginalFilename()));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        product.setPathImage("\\images\\" + multipartFile.getOriginalFilename());
+//        productService.update(product);
+//
+//        return "/mainView/index";
+//    }
 
-        try {
-            multipartFile.transferTo(new File(path + multipartFile.getOriginalFilename()));
-        } catch (IOException e) {
-            e.printStackTrace();
+    @GetMapping("/productUpdate/{id}")
+    public String getBook(@PathVariable int id, Model model){
+        Product product = productService.findOne(id);
+        pathImage  = product.getPathImage();
+        model.addAttribute("eProductUpdate",productService.findOne(id));
+        return "/adminView/productsAdmin";
+    }
+
+    @PostMapping("/productUpdate/{id}")
+    public String updateBook(@ModelAttribute Product product,
+                             @RequestAttribute("image") MultipartFile multipartFile,
+                             @PathVariable int id, Model model){
+        System.out.println("ProductController");
+        product.setId(id);
+
+        if (pathImage.isEmpty()){
+            productService.update(product);
         }
-        product.setPathImage("\\images\\" + multipartFile.getOriginalFilename());
-        productService.update(product);
-
+        else {
+            productService.update(product,multipartFile);
+            model.addAttribute("eProductUpdate", productService.findOne(id));
+        }
         return "/mainView/index";
 
-
     }
+
 
 
     @InitBinder

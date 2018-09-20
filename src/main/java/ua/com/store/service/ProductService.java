@@ -1,5 +1,6 @@
 package ua.com.store.service;
 
+import org.springframework.web.multipart.MultipartFile;
 import ua.com.store.entity.Product;
 
 import java.util.List;
@@ -10,6 +11,6 @@ public interface ProductService {
     void delete(int id);
     List<Product> findAll();
     Product findOne(int id);
-    void update(Product product);
-
+    Product update(Product product, MultipartFile multipartFile);
+    Product update(Product product);
 }

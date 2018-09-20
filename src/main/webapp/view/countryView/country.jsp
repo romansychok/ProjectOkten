@@ -18,8 +18,5 @@ Country
     <form:errors path="countryName"/>
     <input type="submit">
 </form:form>
-<c:forEach items="${countries}" var="country">
-    ${country.countryName}<br>
-</c:forEach>
 
 <%@include file="../tmp/footer.jsp"%>

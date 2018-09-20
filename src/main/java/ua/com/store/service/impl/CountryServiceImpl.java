@@ -46,5 +46,10 @@ public class CountryServiceImpl implements CountryService {
         return dao.findByCountryName(name);
     }
 
+    @Override
+    public void update(Country country) {
+        dao.save(country);
+    }
+
 
 }

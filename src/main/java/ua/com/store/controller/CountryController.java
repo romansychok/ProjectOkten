@@ -39,6 +39,44 @@ public class CountryController {
         return "/countryView/country";
     }
 
+//    @GetMapping("/countries")
+//    public String getCountries(Model model){
+//        model.addAttribute("countries",countryService.findAll());
+//        return "/countryView/countries";
+//    }
+//
+    @GetMapping("/countryUpdate/{id}")
+    public String getCountry(@PathVariable int id, Model model) {
+    model.addAttribute("countryAttribute", countryService.findOne(id));
+    return "/adminView/countryUpdate";
+}
+
+    @PostMapping("/countryUpdate/{id}")
+    public String updateCountry(@ModelAttribute Country country, @PathVariable int id, Model model) {
+        country.setId(id);
+        model.addAttribute("countryAttribute", countryService.findOne(id));
+        countryService.update(country);
+        return "/countryView/country";
+    }
+
+
+
+        @GetMapping("/country-{id}")
+        public String countryPage(@PathVariable("id") int id, Model model){
+                model.addAttribute("country",countryService.findOne(id));
+                return "/countryView/countryPage";
+        }
+
+        @GetMapping("/countries")
+        public String countries(Model model){
+            model.addAttribute("countries",countryService.findAll());
+            return "/countryView/countries";
+        }
+
+
+
+
+
 
     @InitBinder
     public void bind(WebDataBinder binder){
